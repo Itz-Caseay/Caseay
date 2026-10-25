@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caseay | Songs and photos</title>
+  <meta name="description" content="Caseay. Six songs out now, including Chase Him, Guapman and #RAM.">
+  <meta name="theme-color" content="#161731">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+</head>
+<body>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></symbol>
+</svg>
+
+<header class="hero" id="top">
+  <nav class="nav" aria-label="Main">
+    <a class="mark" href="#top">Caseay</a>
+    <ul>
+      <li><a href="#songs">Songs</a></li>
+      <li><a href="#covers">Covers</a></li>
+      <li id="navPhotos"><a href="#photos">Photos</a></li>
+      <li><a href="#listen">Listen</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero background: caseay-1 from the images folder, under a layer of his color -->
+  <div class="hero-photo" id="heroPhoto">
+    <div class="hero-art" aria-hidden="true"><div class="disc"></div></div>
+  </div>
+
+  <h1 class="sr-only">Caseay</h1>
+  <div class="name-wrap">
+    <div class="name" id="name" aria-hidden="true">
+      <span style="--i:0">C</span><span style="--i:1">A</span><span style="--i:2">S</span><span style="--i:3">E</span><span style="--i:4">A</span><span style="--i:5">Y</span>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <p>Six songs out now. Start with Chase Him, his most played.</p>
+    <button class="btn" id="heroPlay" type="button">
+      <svg class="ico" aria-hidden="true"><use href="#i-play"/></svg>
+      Play Chase Him
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="songs" id="songs" aria-labelledby="songsTitle">
+    <div class="sec-head">
+      <h2 id="songsTitle">Songs</h2>
+      <p class="total"><strong id="total">3,100+</strong> streams across six songs</p>
+    </div>
+
+    <!--
+      Add audio files named like the data-audio paths below (inside /audio) and the
+      play buttons will play them. Without a file, the row shows "Preview coming soon".
+    -->
+    <ol class="tracks" id="tracks">
+      <li class="track" data-title="New In The Game" data-audio="audio/new-in-the-game.mp3" style="--w:7%;--n:0">
+        <button class="play" type="button" aria-label="Play New In The Game">
+          <svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg>
+          <svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+        </button>
+        <div class="info">
+          <h3>New In The Game <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></h3>
+          <span class="note" role="status"></span>
+        </div>
+        <div class="bar" aria-hidden="true"><i></i></div>
+        <p class="count">100+<span class="sr-only"> streams</span></p>
+      </li>
+
+      <li class="track" data-title="No Love" data-audio="audio/no-love.mp3" style="--w:7%;--n:1">
+        <button class="play" type="button" aria-label="Play No Love">
+          <svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg>
+          <svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+        </button>
+        <div class="info">
+          <h3>No Love <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></h3>
+          <span class="note" role="status"></span>
+        </div>
+        <div class="bar" aria-hidden="true"><i></i></div>
+        <p class="count">100+<span class="sr-only"> streams</span></p>
+      </li>
+
+      <li class="track" data-title="Lonely" data-audio="audio/lonely.mp3" style="--w:7%;--n:2">
+        <button class="play" type="button" aria-label="Play Lonely">
+          <svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg>
+          <svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+        </button>
+        <div class="info">
+          <h3>Lonely <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></h3>
+          <span class="note" role="status"></span>
+        </div>
+        <div class="bar" aria-hidden="true"><i></i></div>
+        <p class="count">100+<span class="sr-only"> streams</span></p>
+      </li>
+
+      <li class="track" data-title="Guapman" data-audio="audio/guapman.mp3" style="--w:71%;--n:3">
+        <button class="play" type="button" aria-label="Play Guapman">
+          <svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg>
+          <svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+        </button>
+        <div class="info">
+          <h3>Guapman <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></h3>
+          <span class="note" role="status"></span>
+        </div>
+        <div class="bar" aria-hidden="true"><i></i></div>
+        <p class="count">1K+<span class="sr-only"> streams</span></p>
+      </li>
+
+      <li class="track" data-title="Chase Him" data-audio="audio/chase-him.mp3" style="--w:100%;--n:4">
+        <button class="play" type="button" aria-label="Play Chase Him">
+          <svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg>
+          <svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+        </button>
+        <div class="info">
+          <h3>Chase Him <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></h3>
+          <span class="tag">Most streamed</span>
+          <span class="note" role="status"></span>
+        </div>
+        <div class="bar" aria-hidden="true"><i></i></div>
+        <p class="count">1.4K+<span class="sr-only"> streams</span></p>
+      </li>
+
+      <li class="track" data-title="#RAM" data-audio="audio/ram.mp3" style="--w:29%;--n:5">
+        <button class="play" type="button" aria-label="Play #RAM">
+          <svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg>
+          <svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+        </button>
+        <div class="info">
+          <h3>#RAM <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></h3>
+          <span class="note" role="status"></span>
+        </div>
+        <div class="bar" aria-hidden="true"><i></i></div>
+        <p class="count">400+<span class="sr-only"> streams</span></p>
+      </li>
+    </ol>
+    <p class="caption">Bars compare streams between songs.</p>
+  </section>
+
+  <section class="covers" id="covers" aria-labelledby="coversTitle">
+    <div class="sec-head">
+      <h2 id="coversTitle">Covers</h2>
+      <p class="total">One cover for each release</p>
+    </div>
+    <!-- Cover images: put them in images/covers/ named after the song, e.g. chase-him.jpg -->
+    <ul class="cover-grid">
+      <li>
+        <button class="cover" type="button" data-title="New In The Game" data-slug="new-in-the-game" data-v="0" data-state="idle" aria-label="Play New In The Game">
+          <span class="art" aria-hidden="true"><span class="art-title">New In The Game</span></span>
+          <span class="cover-play" aria-hidden="true">
+            <svg class="i-play"><use href="#i-play"/></svg>
+            <svg class="i-pause"><use href="#i-pause"/></svg>
+          </span>
+        </button>
+        <p class="cap"><strong>New In The Game</strong><span>100+ streams</span></p>
+      </li>
+      <li>
+        <button class="cover" type="button" data-title="No Love" data-slug="no-love" data-v="1" data-state="idle" aria-label="Play No Love">
+          <span class="art" aria-hidden="true"><span class="art-title">No Love</span></span>
+          <span class="cover-play" aria-hidden="true">
+            <svg class="i-play"><use href="#i-play"/></svg>
+            <svg class="i-pause"><use href="#i-pause"/></svg>
+          </span>
+        </button>
+        <p class="cap"><strong>No Love</strong><span>100+ streams</span></p>
+      </li>
+      <li>
+        <button class="cover" type="button" data-title="Lonely" data-slug="lonely" data-v="2" data-state="idle" aria-label="Play Lonely">
+          <span class="art" aria-hidden="true"><span class="art-title">Lonely</span></span>
+          <span class="cover-play" aria-hidden="true">
+            <svg class="i-play"><use href="#i-play"/></svg>
+            <svg class="i-pause"><use href="#i-pause"/></svg>
+          </span>
+        </button>
+        <p class="cap"><strong>Lonely</strong><span>100+ streams</span></p>
+      </li>
+      <li>
+        <button class="cover" type="button" data-title="Guapman" data-slug="guapman" data-v="3" data-state="idle" aria-label="Play Guapman">
+          <span class="art" aria-hidden="true"><span class="art-title">Guapman</span></span>
+          <span class="cover-play" aria-hidden="true">
+            <svg class="i-play"><use href="#i-play"/></svg>
+            <svg class="i-pause"><use href="#i-pause"/></svg>
+          </span>
+        </button>
+        <p class="cap"><strong>Guapman</strong><span>1K+ streams</span></p>
+      </li>
+      <li>
+        <button class="cover" type="button" data-title="Chase Him" data-slug="chase-him" data-v="4" data-state="idle" aria-label="Play Chase Him">
+          <span class="art" aria-hidden="true"><span class="art-title">Chase Him</span></span>
+          <span class="cover-play" aria-hidden="true">
+            <svg class="i-play"><use href="#i-play"/></svg>
+            <svg class="i-pause"><use href="#i-pause"/></svg>
+          </span>
+        </button>
+        <p class="cap"><strong>Chase Him</strong><span>1.4K+ streams</span></p>
+      </li>
+      <li>
+        <button class="cover" type="button" data-title="#RAM" data-slug="ram" data-v="5" data-state="idle" aria-label="Play #RAM">
+          <span class="art" aria-hidden="true"><span class="art-title">#RAM</span></span>
+          <span class="cover-play" aria-hidden="true">
+            <svg class="i-play"><use href="#i-play"/></svg>
+            <svg class="i-pause"><use href="#i-pause"/></svg>
+          </span>
+        </button>
+        <p class="cap"><strong>#RAM</strong><span>400+ streams</span></p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="next" id="next" aria-labelledby="nextTitle">
+    <div class="next-inner">
+      <div class="next-copy">
+        <h2 id="nextTitle">Next release</h2>
+        <p class="next-name" id="nextName">New music is on the way.</p>
+        <p class="next-date" id="nextDate"></p>
+        <div class="countdown" id="countdown" role="timer" aria-live="off" hidden>
+          <div><b id="cdD">00</b><span>days</span></div>
+          <div><b id="cdH">00</b><span>hours</span></div>
+          <div><b id="cdM">00</b><span>minutes</span></div>
+          <div><b id="cdS">00</b><span>seconds</span></div>
+        </div>
+        <a class="btn btn-ink" id="nextLink" href="#" target="_blank" rel="noopener" hidden>Pre-save</a>
+      </div>
+      <div class="next-cover" id="nextCover">
+        <span class="art-title" aria-hidden="true">Coming soon</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="photos" aria-labelledby="photosTitle">
+    <div class="sec-head">
+      <h2 id="photosTitle">Photos</h2>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+</main>
+
+<footer class="foot" id="listen">
+  <h2>Hear Caseay everywhere.</h2>
+  <div class="links" id="links"></div>
+  <p class="fine">&copy; <span id="year">2026</span> Caseay. All rights reserved.</p>
+</footer>
+
+<dialog id="lightbox" aria-label="Photo viewer">
+  <div class="lb">
+    <button class="lb-btn lb-close" type="button" aria-label="Close">&times;</button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous photo">&#8249;</button>
+    <img alt="">
+    <button class="lb-btn lb-next" type="button" aria-label="Next photo">&#8250;</button>
+  </div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
