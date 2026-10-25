@@ -1,0 +1,3 @@
+Drop Caseay photos here, named caseay-1.jpg, caseay-2.jpg, caseay-3.jpg ...
+(jpg, jpeg, png or webp). caseay-1 becomes the hero portrait.
+Or list your own filenames in CONFIG.images at the top of script.js.
