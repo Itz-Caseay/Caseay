@@ -15,7 +15,7 @@ const CONFIG = {
     date: '',           // e.g. '2026-12-01T18:00:00' (your local time) starts a countdown
     note: 'feat. Tonni SS',
     cover: '',          // e.g. 'images/covers/upcoming.jpg' (auto-loads that file name if empty)
-    link: '',           // pre-save link
+    link: 'https://ffm.to/fdd529a8023e22c65d302cba5fbdf11c9863e02251eb3936',           // pre-save link
     linkText: 'Pre-save'
   },
 
