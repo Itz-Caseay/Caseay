@@ -9,20 +9,20 @@ const CONFIG = {
   // Seconds each photo stays in the hero background before the next one fades in
   heroSeconds: 15,
 
-  // Upcoming release. Fill in what you know; empty fields stay hidden.
+  // Featured live release details. Fill in what you know; empty fields stay hidden.
   upcoming: {
     title: 'Bold',
     date: '',           // e.g. '2026-12-01T18:00:00' (your local time) starts a countdown
     note: 'feat. Tonni SS',
     cover: '',          // e.g. 'images/covers/upcoming.jpg' (auto-loads that file name if empty)
-    link: 'https://ffm.to/fdd529a8023e22c65d302cba5fbdf11c9863e02251eb3936',           // pre-save link
-    linkText: 'Pre-save'
+    link: 'https://ffm.to/fdd529a8023e22c65d302cba5fbdf11c9863e02251eb3936',           // streaming link
+    linkText: 'Listen to Bold'
   },
 
   // Release covers. Leave empty to auto-load images/covers/<song-name>.jpg
   // (new-in-the-game, no-love, lonely, guapman, chase-him, ram). Or map them yourself:
   // { 'chase-him': 'images/chase-him-cover.png' }
-  covers: {},
+  covers: { bold: 'images/covers/upcoming.jpg' },
 
   // Shown in the footer if filled in
   email: '',
@@ -131,7 +131,9 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
   function setState(row, state) {
     row.dataset.state = state;
-    const label = (state === 'playing' ? 'Pause ' : 'Play ') + row.dataset.title;
+    const label = row.dataset.link
+      ? 'Listen to ' + row.dataset.title
+      : (state === 'playing' ? 'Pause ' : 'Play ') + row.dataset.title;
     $('.play', row).setAttribute('aria-label', label);
     // keep the matching cover in sync
     $$('.cover').filter(c => c.dataset.title === row.dataset.title).forEach(c => {
@@ -162,6 +164,11 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   }
 
   function toggle(row) {
+    if (row.dataset.link) {
+      window.open(row.dataset.link, '_blank', 'noopener');
+      return;
+    }
+
     const a = getAudio(row);
     players.forEach((other, r) => { if (r !== row) other.pause(); });
     if (a.paused) {
@@ -183,7 +190,7 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   }));
 
   $('#heroPlay').addEventListener('click', () => {
-    const row = $('.track[data-title="Chase Him"]');
+    const row = $('.track[data-title="Bold"]');
     row.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
     toggle(row);
   });
@@ -191,7 +198,7 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   // Bars grow and the total counts up when the list comes into view
   const list = $('#tracks');
   const total = $('#total');
-  const TARGET = 3100;
+  const TARGET = 4979;
 
   function countUp() {
     if (reduceMotion) return;
